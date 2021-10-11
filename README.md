@@ -20,4 +20,3 @@
 Feel free to use this repo.<br/>
 Basic knowledge of HTML5, CSS and React is sufficient to customize this repo for your requirements.
 
-![](https://visitor-badge.glitch.me/badge?page_id=single-page-resume-builder)
