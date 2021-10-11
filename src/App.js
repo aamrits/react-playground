@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Footer, Sidebar, Container } from './components';
+import Home from './Home';
+import GithubSearch from './apps/github-search/GithubSearch';
+import Todo from './apps/todo/Todo';
+import ImageSearch from './apps/image-search/ImageSearch';
+import FetchPosts from './apps/fetch-posts/FetchPosts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="dark">
+        <section>
+          <Sidebar />
+
+          <div className="main">
+            <Container>
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route exact path="/github-search">
+                  <GithubSearch />
+                </Route>
+                <Route exact path="/todo-list">
+                  <Todo />
+                </Route>
+                <Route exact path="/posts-fetch">
+                  <FetchPosts />
+                </Route>
+                <Route exact path="/image-search">
+                  <ImageSearch />
+                </Route>
+              </Switch>
+            </Container>
+          </div>
+          
+        </section>
+      </div>
+
+      <Footer />
+    </Router>
   );
 }
 
