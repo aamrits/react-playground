@@ -13,7 +13,6 @@ function App() {
       <div className="dark">
         <section>
           <Sidebar />
-
           <div className="main">
             <Container>
               <Switch>
@@ -35,11 +34,10 @@ function App() {
               </Switch>
             </Container>
           </div>
-          
         </section>
-      </div>
 
-      <Footer />
+        <Footer />
+      </div>
     </Router>
   );
 }

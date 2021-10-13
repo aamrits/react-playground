@@ -23,6 +23,8 @@
 .dark .main {
   background-color: var(--grey);
   color: var(--white);
+  height: calc(100vh - 30px);
+  overflow-y: scroll;
 }
 
 section {
@@ -94,3 +96,4 @@ a {
 .img-fluid {
   width: 100%;
 }
+
